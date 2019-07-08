@@ -1,0 +1,11 @@
+<app-form-name *ngIf="this.nameSaved === false && this.ageSaved === false"
+                (nameToParent)="setName($event)">
+</app-form-name>
+
+<app-form-age *ngIf="this.nameSaved === true && this.ageSaved === false"
+                (ageToParent)="setAge($event)"
+                (resetForm)='redoName($event)'>
+</app-form-age>
+
+<app-form-result *ngIf="this.nameSaved === true && this.ageSaved == true"
+                 [resumeInfo]= 'userInfo'></app-form-result>

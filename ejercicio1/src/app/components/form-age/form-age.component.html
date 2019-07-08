@@ -1,0 +1,10 @@
+<mat-form-field class="example-form-field">
+    <input matInput type="text" placeholder="How old are you?" [(ngModel)]="age">
+    <button mat-button *ngIf="age" matSuffix mat-icon-button aria-label="Clear" (click)="age=''">
+      <mat-icon>close</mat-icon>
+    </button>
+</mat-form-field>
+<div class='buttons'>
+  <button mat-raised-button color="primary"(click)='toFormName($event)'>Prev</button>
+  <button mat-raised-button color="primary"(click)='sendAge($event)'>Next</button>
+</div>
